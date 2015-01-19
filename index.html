@@ -1,0 +1,181 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+$(function () {
+    $.getJSON("2014.json", function(data){
+        matrix = data;
+        console.log(matrix);
+        
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Variación UF año 2014'
+            },
+            subtitle: {
+                text: 'Source: sii.cl'
+            },
+            xAxis: {
+                categories: [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec'
+                ]
+            },
+            yAxis: {
+                min: 23200,
+                title: {
+                    text: 'UF'
+                }
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.3,
+                    groupPadding: 0,
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '1',
+                data: matrix[0]
+
+            }, {
+                name: '2',
+                data: matrix[1]
+
+            }, {
+                name: '3',
+                data: matrix[2]
+
+            }, {
+                name: '4',
+                data: matrix[3]
+
+            }, {
+                name: '5',
+                data: matrix[4]
+
+            }, {
+                name: '6',
+                data: matrix[5]
+
+            }, {
+                name: '7',
+                data: matrix[6]
+
+            }, {
+                name: '8',
+                data: matrix[7]
+
+            }, {
+                name: '9',
+                data: matrix[8]
+
+            }, {
+                name: '10',
+                data: matrix[9]
+
+            }, {
+                name: '11',
+                data: matrix[10]
+
+            }, {
+                name: '12',
+                data: matrix[11]
+
+            }, {
+                name: '13',
+                data: matrix[12]
+
+            }, {
+                name: '14',
+                data: matrix[13]
+
+            }, {
+                name: '15',
+                data: matrix[14]
+
+            }, {
+                name: '16',
+                data: matrix[15]
+
+            }, {
+                name: '17',
+                data: matrix[16]
+
+            }, {
+                name: '18',
+                data: matrix[17]
+
+            }, {
+                name: '19',
+                data: matrix[18]
+
+            }, {
+                name: '20',
+                data: matrix[19]
+
+            }, {
+                name: '21',
+                data: matrix[20]
+
+            }, {
+                name: '22',
+                data: matrix[21]
+
+            }, {
+                name: '23',
+                data: matrix[22]
+
+            }, {
+                name: '24',
+                data: matrix[23]
+
+            }, {
+                name: '25',
+                data: matrix[24]
+
+            }, {
+                name: '26',
+                data: matrix[25]
+
+            }, {
+                name: '27',
+                data: matrix[26]
+
+            }, {
+                name: '28',
+                data: matrix[27]
+
+            }, {
+                name: '29',
+                data: matrix[28]
+
+            }, {
+                name: '30',
+                data: matrix[29]
+
+            }, {
+                name: '31',
+                data: matrix[30]
+
+            }]
+        });
+    });
+});
+</script>
