@@ -22,7 +22,7 @@ def main():
 
     # logging.info("Página inicial: " +str(num_page))
 
-    url = "http://www.sii.cl/pagina/valores/uf/uf2014.htm"
+    url = "http://www.sii.cl/pagina/valores/uf/uf2015.htm"
     page = openwebsite(url);
     soup = BeautifulSoup(page);
     toparse = soup.table.tbody;
@@ -56,7 +56,7 @@ def main():
     for dia, obj in enumerate(matrix):
         print dia+1, obj                 
 
-    json.dump(matrix, open("2014.json", "w"))
+    json.dump(matrix, open("2015.json", "w"))
 
     return True
 
