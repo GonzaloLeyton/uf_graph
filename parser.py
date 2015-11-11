@@ -19,10 +19,11 @@ def openwebsite(url):
 def main():
     salida = dict()
     lista_de_matches = []
+    year = "2015"
 
     # logging.info("Página inicial: " +str(num_page))
 
-    url = "http://www.sii.cl/pagina/valores/uf/uf2015.htm"
+    url = "http://www.sii.cl/pagina/valores/uf/uf"+year+".htm"
     page = openwebsite(url);
     soup = BeautifulSoup(page);
     toparse = soup.table.tbody;
@@ -56,7 +57,7 @@ def main():
     for dia, obj in enumerate(matrix):
         print dia+1, obj                 
 
-    json.dump(matrix, open("2015.json", "w"))
+    json.dump(matrix, open(year+".json", "w"))
 
     return True
 
