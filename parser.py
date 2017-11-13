@@ -19,7 +19,7 @@ def openwebsite(url):
 def main():
     salida = dict()
     lista_de_matches = []
-    year = "2016"
+    year = sys.argv[1]
 
     # logging.info("Página inicial: " +str(num_page))
 
