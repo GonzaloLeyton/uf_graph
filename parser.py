@@ -23,10 +23,10 @@ def main():
 
     # logging.info("Página inicial: " +str(num_page))
 
-    url = "http://www.sii.cl/pagina/valores/uf/uf"+year+".htm"
+    url = "http://www.sii.cl/valores_y_fechas/uf/uf"+year+".htm"
     page = openwebsite(url);
-    soup = BeautifulSoup(page);
-    toparse = soup.table.tbody;
+    soup = BeautifulSoup(page, "html.parser");
+    toparse = soup.find(id="mes_all").table.tbody;
 
     matrix = []
 
