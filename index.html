@@ -27,7 +27,7 @@ $("#year").on('change', function(){
 
 
 var ejecAjax = function(year) {
-    $.getJSON(year+".json", function(data){
+    $.getJSON("./"+year+".json", function(data){
         matrix = data;
         console.log(matrix);
         $('#container').highcharts({
